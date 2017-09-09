@@ -8,4 +8,7 @@ export class ServerService {
     const headers =  new Headers({'Content-Type': 'application/json'});
     return this.http.post('https://ng-udemy-app.firebaseio.com/data.json', servers, {headers: headers});
   }
+  getServers() {
+    return this.http.get('https://ng-udemy-app.firebaseio.com/data.json')
+  }
 }
